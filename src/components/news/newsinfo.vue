@@ -7,12 +7,17 @@
         <div id="content" v-html="info.content">
 
         </div>
+        <commen :id = "id"></commen>
     </div>
 </template>
 
 <script>
+import commen from '../subcom/commen.vue';
 import { Toast } from 'mint-ui';
 export default {
+    components:{
+        commen
+    },
     data(){
         return {
             id : 0,

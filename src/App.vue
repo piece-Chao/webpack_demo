@@ -15,9 +15,9 @@
 				<span class="mui-icon mui-icon-email"></span>
 				<span class="mui-tab-label">消息</span>
 			</router-link>
-			<router-link class="mui-tab-item" to="/tabbar-with-contact">
+			<router-link class="mui-tab-item" to="/car">
 				<span class="mui-icon mui-icon-contact"><span class="mui-badge">9</span></span>
-				<span class="mui-tab-label">通讯录</span>
+				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-item" to="/tabbar-with-map">
 				<span class="mui-icon mui-icon-gear"></span>
@@ -32,7 +32,7 @@
 	export default{  // es6的导出对象的写法
 		data(){  //等价于 es5的 data:function(){
 			return {
-				msg :'hello vuejs111111'
+
 			}
 		},
 		methods:{
@@ -46,7 +46,5 @@
 
 <style scoped>
 /*当前页面的css样式写到这里，其中scoped表示这个里面写的css代码只是在当前组件页面上有效，不会去影响到其他组件页面*/
-	.red{
-		color: red;
-	}
+
 </style>

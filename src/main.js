@@ -7,20 +7,38 @@ import App from './App.vue';
 import VueRouter from 'vue-router';
 // 3.0.1 将 vueRoute 对象绑定到vue对象上
 Vue.use(VueRouter);
+//导入vue-preview
+import VuePreview from 'vue-preview';
+Vue.use(VuePreview);
 // 3.0.2 导入路由规则对应的组件对象
 import home from './components/Home.vue';
 import shopcar from './components/shopcar/car.vue';
 import newslist from './components/news/newslist.vue';
 import newsinfo from './components/news/newsinfo.vue';
+import photolist from './components/photo/photolist.vue';
+import photoinfo from './components/photo/photoinfo.vue';
 // 3.0.3 定义路由规则
 var router1 = new VueRouter({
-	linkActiveClass : 'mui-active',
-	routes : [
-		{path : '/home', component: home},
-		{path: '/shopcar', component: shopcar},
-		{path: '/news/newslist', component : newslist},
-		{path: '/news/newsinfo/:id', component : newsinfo}
-	]
+    linkActiveClass: 'mui-active',
+    routes: [{
+        path: '/home',
+        component: home
+    }, {
+        path: '/shopcar',
+        component: shopcar
+    }, {
+        path: '/news/newslist',
+        component: newslist
+    }, {
+        path: '/news/newsinfo/:id',
+        component: newsinfo
+    }, {
+        path: '/photo/photolist',
+        component: photolist
+    }, {
+        path: '/photo/photoinfo/:id',
+        component: photoinfo
+    }]
 })
 
 // 4.0 使用mint-ui
@@ -37,16 +55,18 @@ import '../statics/css/site.css'
 
 // 7.0 引入vue-resource， 并绑定， 就会自动在Vue实例上注册一个$http对象
 import VueResource from 'vue-resource';
+
 Vue.use(VueResource);
 
 // 8.0 定义一个全局过滤器实现日期的格式化
 import moment from 'moment';
-Vue.filter('datefmt', function(input, fmtstring){
-	return moment(input).format(fmtstring)
+
+Vue.filter('datefmt', function (input, fmtstring) {
+    return moment(input).format(fmtstring)
 })
 // 3.0 利用Vue对象进行解析渲染
 new Vue({
-	el:'#app',
-	router: router1,
-	render:c=>c(App)
+    el: '#app',
+    router: router1,
+    render: c => c(App)
 });

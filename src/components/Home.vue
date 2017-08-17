@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="temp">
         <!-- 轮播图组件 -->
-        <mt-swipe :auto="4000">
+        <mt-swipe :auto="2000">
             <mt-swipe-item v-for="item in list" :key="item.id">
                 <img v-bind:src="item.img">
             </mt-swipe-item>
