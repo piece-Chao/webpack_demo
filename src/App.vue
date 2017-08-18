@@ -16,7 +16,7 @@
 				<span class="mui-tab-label">消息</span>
 			</router-link>
 			<router-link class="mui-tab-item" to="/car">
-				<span class="mui-icon mui-icon-contact"><span class="mui-badge">9</span></span>
+				<span class="mui-icon mui-icon-contact"><span class="mui-badge" id="carid">0</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-item" to="/tabbar-with-map">
@@ -28,6 +28,13 @@
 </template>
 
 <script>
+	import {vm,COUNTSTR} from './components/subcom/vm.js';
+	vm.$on(COUNTSTR,function(count){
+		console.log(123);
+		var carid = document.getElementById("carid");
+		carid.innerText = parseInt(carid.innerText) + count;
+	})
+
 	// 负责导出 .vue这个组件对象(它本质上是一个Vue对象,所以Vue中该定义的元素都可以使用)
 	export default{  // es6的导出对象的写法
 		data(){  //等价于 es5的 data:function(){

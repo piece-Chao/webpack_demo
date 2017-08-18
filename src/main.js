@@ -17,6 +17,10 @@ import newslist from './components/news/newslist.vue';
 import newsinfo from './components/news/newsinfo.vue';
 import photolist from './components/photo/photolist.vue';
 import photoinfo from './components/photo/photoinfo.vue';
+import goodslist from './components/goods/goodslist.vue';
+import goodsinfo from './components/goods/goodsinfo.vue';
+import goodsdesc from './components/goods/goodsdesc.vue';
+import goodscomment from './components/goods/goodscomment.vue';
 // 3.0.3 定义路由规则
 var router1 = new VueRouter({
     linkActiveClass: 'mui-active',
@@ -38,6 +42,18 @@ var router1 = new VueRouter({
     }, {
         path: '/photo/photoinfo/:id',
         component: photoinfo
+    }, {
+        path: '/goods/goodslist',
+        component: goodslist
+    }, {
+        path: '/goods/goodsinfo/:id',
+        component: goodsinfo
+    }, {
+        path: "/goods/goodsdesc/:id",
+        component: goodsdesc
+    }, {
+        path: '/goods/goodscomment/:id',
+        component: goodscomment
     }]
 })
 
@@ -61,10 +77,10 @@ Vue.use(VueResource);
 // 8.0 定义一个全局过滤器实现日期的格式化
 import moment from 'moment';
 
-Vue.filter('datefmt', function (input, fmtstring) {
-    return moment(input).format(fmtstring)
-})
-// 3.0 利用Vue对象进行解析渲染
+Vue.filter('datefmt', function(input, fmtstring) {
+        return moment(input).format(fmtstring)
+    })
+    // 3.0 利用Vue对象进行解析渲染
 new Vue({
     el: '#app',
     router: router1,
