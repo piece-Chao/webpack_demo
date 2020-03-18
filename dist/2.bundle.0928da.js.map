@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/handle.js"],"names":["hello","console","log"],"mappings":"yFAAe,SAASA,IACpBC,QAAQC,IAAI,UADhB","file":"2.bundle.0928da.js","sourcesContent":["export default function hello() {\n    console.log('handle')\n};\n"],"sourceRoot":""}

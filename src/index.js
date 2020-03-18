@@ -11,4 +11,16 @@ class Animal {
 }
 
 const dog = new Animal('dog');
-console.log(dog.getName())
+console.log(dog.getName());
+
+document.getElementById('btn').onclick = function() {
+    import('./handle').then(fn => fn.default())
+}
+
+fetch('/api/user').then((res) => {
+    return res.json()
+}).then((data) => {
+    console.log(data)
+}).catch((err) => {
+    console.log(err)
+})
