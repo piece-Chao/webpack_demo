@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{33:function(n,o,c){"use strict";function e(){console.log("handle")}c.r(o),c.d(o,"default",(function(){return e}))}}]);
+//# sourceMappingURL=2.bundle.0928da.js.map
